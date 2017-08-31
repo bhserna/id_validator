@@ -1,0 +1,32 @@
+{
+  "contract_name": "Project",
+  "abi": [
+    {
+      "constant": false,
+      "inputs": [],
+      "name": "getFundingGoal",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "name": "amount",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "type": "constructor"
+    }
+  ],
+  "unlinked_binary": "0x60606040523415600e57600080fd5b6040516020806100cc833981016040528080519150505b60008190555b505b60918061003b6000396000f300606060405263ffffffff7c0100000000000000000000000000000000000000000000000000000000600035041663b85090f38114603c575b600080fd5b3415604657600080fd5b604c605e565b60405190815260200160405180910390f35b6000545b905600a165627a7a7230582052818dd2310b3f4a69ac43b5835847d2780def11875d175b95e5097ac4b3ccdf0029",
+  "networks": {},
+  "schema_version": "0.0.5",
+  "updated_at": 1504187862176
+}
