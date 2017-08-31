@@ -26,6 +26,14 @@ contract Validator {
     return address(selectedUser);
   }
 
-  function validateUserEmail(address userAddress, string email) returns(address) {
+  function validateUserEmail(address userAddress, bytes32 email) returns(address) {
+    User user = User(userAddress);
+    user.addEmailValidation(email);
+    return userAddress;
+  }
+
+  function isEmailValidatedForUser(address userAddress, bytes32 email) returns(bool) {
+    User user = User(userAddress);
+    return user.isEmailValidated(email);
   }
 }

@@ -4,6 +4,7 @@ contract User {
   string private name;
   string private rfc;
   address private registrator;
+  mapping (bytes32 => address[]) private emailValidations;
 
   function User(string _name, string _rfc) {
     name = _name;
@@ -29,5 +30,14 @@ contract User {
 
   function getRegistrator() returns(address) {
     return registrator;
+  }
+
+  function addEmailValidation(bytes32 email) returns(bool) {
+    emailValidations[email].push(tx.origin);
+    return true;
+  }
+
+  function isEmailValidated(bytes32 email) returns(bool) {
+    return emailValidations[email].length > 0;
   }
 }
